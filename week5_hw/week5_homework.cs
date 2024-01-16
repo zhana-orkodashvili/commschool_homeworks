@@ -1,7 +1,7 @@
 ﻿
 namespace week5_hw;
 
-internal abstract class Program
+internal abstract class week5_homework
 {
     public static void Main(string[] args)
     {
