@@ -12,3 +12,4 @@ C:\Users\User\RiderProjects\commschool_homeworks\week5_hw\obj\Debug\net8.0\refin
 C:\Users\User\RiderProjects\commschool_homeworks\week5_hw\obj\Debug\net8.0\week5_hw.pdb
 C:\Users\User\RiderProjects\commschool_homeworks\week5_hw\obj\Debug\net8.0\week5_hw.genruntimeconfig.cache
 C:\Users\User\RiderProjects\commschool_homeworks\week5_hw\obj\Debug\net8.0\ref\week5_hw.dll
+C:\Users\User\RiderProjects\commschool_homeworks\week5_hw\obj\Debug\net8.0\week5_hw.sourcelink.json
