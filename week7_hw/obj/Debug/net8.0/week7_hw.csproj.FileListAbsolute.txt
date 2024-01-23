@@ -1,0 +1,15 @@
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\bin\Debug\net8.0\week7_hw.exe
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\bin\Debug\net8.0\week7_hw.deps.json
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\bin\Debug\net8.0\week7_hw.runtimeconfig.json
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\bin\Debug\net8.0\week7_hw.dll
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\bin\Debug\net8.0\week7_hw.pdb
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\obj\Debug\net8.0\week7_hw.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\obj\Debug\net8.0\week7_hw.AssemblyInfoInputs.cache
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\obj\Debug\net8.0\week7_hw.AssemblyInfo.cs
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\obj\Debug\net8.0\week7_hw.csproj.CoreCompileInputs.cache
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\obj\Debug\net8.0\week7_hw.sourcelink.json
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\obj\Debug\net8.0\week7_hw.dll
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\obj\Debug\net8.0\refint\week7_hw.dll
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\obj\Debug\net8.0\week7_hw.pdb
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\obj\Debug\net8.0\week7_hw.genruntimeconfig.cache
+C:\Users\User\RiderProjects\commschool_homeworks\week7_hw\obj\Debug\net8.0\ref\week7_hw.dll
