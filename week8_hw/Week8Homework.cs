@@ -59,11 +59,10 @@ internal abstract class Week8Homework
         // 5.
         
         Console.WriteLine("---- Problem 5 ----");
+
+        int num = 12345;
+        PrintDigits(num);
         
-        List<int> numbers = [1, 2, 3, 4, 5];
-        PrintList(numbers);
-        
-        Console.WriteLine();
         Console.WriteLine();
         
         // 6.
@@ -121,18 +120,15 @@ internal abstract class Week8Homework
         }
     }
 
-    static void PrintList(List<int> numList, int i=0)
+    static void PrintDigits(int num)
     {
-        if (i < numList.Count)
-        {
-            if (numList.Count == 0)
-                Console.Write("Empty List");
-            else
-            {
-                Console.Write($"{numList[i]}  ");
-                PrintList(numList, i + 1);
-            }
-        }
+        if (num == 0)
+            return;
+        
+        PrintDigits(num / 10);
+        
+        int currentDigit = num % 10;
+        Console.WriteLine(currentDigit);
     }
     
     static bool ContainsDuplicate(List<int> nums)
