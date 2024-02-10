@@ -18,7 +18,6 @@ internal abstract class Week11Homework
         if (!int.TryParse(Console.ReadLine(), out var lines) || lines <= 0)
             Console.WriteLine("Invalid Input");
 
-
         Console.WriteLine("Enter text:");
 
         string?[] lineList = new string?[lines];
@@ -31,13 +30,11 @@ internal abstract class Week11Homework
         for (var i = 0; i < 3; i++)
             directory = Directory.GetParent(directory).ToString();
 
-
         var filePath = Path.Combine(directory, "output.txt");
 
         if (!File.Exists(filePath))
             File.Create(filePath).Close();
-
-
+        
         File.WriteAllLines(filePath, lineList!);
 
         Console.WriteLine($"Last line from file: {File.ReadAllLines(filePath)[lines - 1]}");
@@ -46,9 +43,8 @@ internal abstract class Week11Homework
         // 2.
 
         Console.WriteLine("---- Problem 2 ----");
-
-
-        Console.WriteLine("Enter the number of lines:");
+        
+        Console.WriteLine("Enter the number for multiplications table:");
         if (!int.TryParse(Console.ReadLine(), out var N) || N <= 0)
             Console.WriteLine("Invalid Input");
 
@@ -71,10 +67,8 @@ internal abstract class Week11Homework
 
         // 3.
         
-        
         Console.WriteLine("---- Problem 3 ----");
-
-
+        
         Console.WriteLine("Enter the string:");
         string inputString = Console.ReadLine();
 
@@ -84,7 +78,6 @@ internal abstract class Week11Homework
 
         if (length % parts != 0)
             Console.WriteLine($"Not divisible by {parts}");
-        
         else
         {
             int partLength = (int)((double)length / parts);
@@ -107,14 +100,12 @@ internal abstract class Week11Homework
             string xmlContent = xmlDoc.OuterXml;
 
             Console.WriteLine(xmlContent);
-
         }
         
         
         // 4.
         
         Console.WriteLine("---- Problem 4 ----");
-
         
         string currentDate = DateTime.Now.ToString("MMMM dd, yyyy");
         string data = " [ {\"currentDate\": \"" + currentDate + "\", \"birthday\": \"June 20, 2012\"} ]";
@@ -130,33 +121,13 @@ internal abstract class Week11Homework
         
         var birthday = new DateTime(currentDateFromFile.Year, birthdayFromFile.Month, birthdayFromFile.Day);
 
+        if (birthday < currentDateFromFile)
+            birthday = birthday.AddYears(1);
         
         TimeSpan daysUntilBirthday =  birthday.Subtract(currentDateFromFile);
-
-
+        
         Console.WriteLine($"Days until birthday: {daysUntilBirthday.Days}");
         
-        
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 
