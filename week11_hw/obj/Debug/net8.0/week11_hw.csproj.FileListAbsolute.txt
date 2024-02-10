@@ -13,3 +13,6 @@ C:\Users\User\RiderProjects\commschool_homeworks\week11_hw\obj\Debug\net8.0\refi
 C:\Users\User\RiderProjects\commschool_homeworks\week11_hw\obj\Debug\net8.0\week11_hw.pdb
 C:\Users\User\RiderProjects\commschool_homeworks\week11_hw\obj\Debug\net8.0\week11_hw.genruntimeconfig.cache
 C:\Users\User\RiderProjects\commschool_homeworks\week11_hw\obj\Debug\net8.0\ref\week11_hw.dll
+C:\Users\User\RiderProjects\commschool_homeworks\week11_hw\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\User\RiderProjects\commschool_homeworks\week11_hw\obj\Debug\net8.0\week11_hw.csproj.AssemblyReference.cache
+C:\Users\User\RiderProjects\commschool_homeworks\week11_hw\obj\Debug\net8.0\week11_hw.csproj.CopyComplete

@@ -1,6 +1,9 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Xml;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Formatting = Newtonsoft.Json.Formatting;
 
 namespace week11_hw;
 
@@ -67,6 +70,7 @@ internal abstract class Week11Homework
 
         // 3.
         
+        
         Console.WriteLine("---- Problem 3 ----");
         
         Console.WriteLine("Enter the string:");
@@ -97,36 +101,75 @@ internal abstract class Week11Homework
             }
 
             xmlDoc.AppendChild(root1);
-            string xmlContent = xmlDoc.OuterXml;
+            
+            var filePath3 = Path.Combine(directory, "xmlResult.xml");
 
-            Console.WriteLine(xmlContent);
+            try
+            {
+                xmlDoc.Save(filePath3);
+                Console.WriteLine("XML document saved successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            
         }
         
         
         // 4.
         
         Console.WriteLine("---- Problem 4 ----");
-        
-        string currentDate = DateTime.Now.ToString("MMMM dd, yyyy");
-        string data = " [ {\"currentDate\": \"" + currentDate + "\", \"birthday\": \"June 20, 2012\"} ]";
-        
-        using JsonDocument doc = JsonDocument.Parse(data);
-        JsonElement root = doc.RootElement;
 
-        Console.WriteLine(root);
+        var birthdaysList = new List<Birthday>();
+        birthdaysList.Add(new Birthday(DateTime.Now, new DateTime(2012, 6, 20)));
         
-        var element1 = root[0];
-        var currentDateFromFile = DateTime.Parse(element1.GetProperty("currentDate").ToString());
-        var birthdayFromFile = DateTime.Parse(element1.GetProperty("birthday").ToString());
         
-        var birthday = new DateTime(currentDateFromFile.Year, birthdayFromFile.Month, birthdayFromFile.Day);
+        var _dataConverted = JsonConvert.SerializeObject(birthdaysList.ToArray(), (Formatting)Formatting.Indented);
+        
+        var filePath4 = Path.Combine(directory, "jsonResult.json");
+        
+        if (!File.Exists(filePath4))
+            File.Create(filePath4).Close();
+        try
+        {
+            File.WriteAllText(filePath4, _dataConverted);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+        
+        try
+        {
+            var jsonData = File.ReadAllText(filePath4);
+            var birthdaysListFromFile = JsonConvert.DeserializeObject<Birthday[]>(jsonData);
 
-        if (birthday < currentDateFromFile)
-            birthday = birthday.AddYears(1);
+            if (birthdaysListFromFile != null && birthdaysListFromFile.Length > 0)
+            {
+                DateTime currentDate = birthdaysListFromFile[0].CurrentDate;
+                DateTime birthday = birthdaysListFromFile[0].BirthDate;
+                
+                birthday = new DateTime(currentDate.Year, birthday.Month, birthday.Day);
+                 
+                if (birthday < currentDate)
+                    birthday = birthday.AddYears(1);
+                
+                TimeSpan daysUntilBirthday = birthday - currentDate;
+
+                Console.WriteLine($"Days until birthday: {daysUntilBirthday.Days}");
+
+            }
+            else
+            {
+                Console.WriteLine("No records found.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
         
-        TimeSpan daysUntilBirthday =  birthday.Subtract(currentDateFromFile);
-        
-        Console.WriteLine($"Days until birthday: {daysUntilBirthday.Days}");
         
 
     }
